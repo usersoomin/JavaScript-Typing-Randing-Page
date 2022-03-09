@@ -1,0 +1,43 @@
+@import '_reset.css';
+@charset 'UTF-8';
+
+.wrap {
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.wrap > span {
+    display: inline-block;
+    font-size: 5rem;
+    color: lightcoral;
+}
+.word {
+    font-size: 2rem;
+    color: skyblue;
+    margin: 20px 0;
+    display: inline-block;
+    position: relative;
+}
+.word::after {
+    content: "";
+    width: 5px;
+    height: 100%;
+    margin: 0 5px;
+    background: skyblue;
+    position: absolute;
+}
+.word.active::after{
+    display: none;
+}
+.baseword {
+    font-size: 2rem;
+}
